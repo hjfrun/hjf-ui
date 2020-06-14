@@ -1,22 +1,14 @@
 <template>
   <div id="app">
-    <jf-button @click="visible=!visible">显示</jf-button>
-    <jf-dialog :visible.sync="visible" title="温馨提示" width="60%" top="30vh">
-      <ul>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-      </ul>
-      <template v-slot:footer>
-        <jf-button type="primary" @click="visible=false">确定</jf-button>
-        <jf-button @click="visible=false">取消</jf-button>
-      </template>
-    </jf-dialog>
-    <!-- <jf-dialog>
-      <template v-slot:title>
-        <h2>我是标题</h2>
-      </template>
-    </jf-dialog>-->
+    <!-- <jf-radio label="1" v-model="gender">男</jf-radio>
+    <jf-radio label="0" v-model="gender">女</jf-radio>-->
+    <!-- <jf-radio label="1" v-model="gender"></jf-radio>
+    <jf-radio label="0" v-model="gender"></jf-radio>-->
+
+    <jf-radio-group v-model="gender">
+      <jf-radio label="1">男</jf-radio>
+      <jf-radio label="0">女</jf-radio>
+    </jf-radio-group>
   </div>
 </template>
 
@@ -26,7 +18,7 @@ export default {
   components: {},
   data() {
     return {
-      visible: false
+      gender: '1'
     }
   },
   methods: {}
@@ -34,13 +26,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin-bottom: 20px;
-  .jf-button {
-    margin-bottom: 20px;
-  }
-}
 </style>

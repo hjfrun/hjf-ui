@@ -1,13 +1,17 @@
 <template>
   <transition name="dialog-fade">
     <!-- 对话框的遮罩, .self代表只有点击自己才触发 -->
-    <div class="jf-dialog__wrapper" v-show="visible" @click.self="$emit('update:visible', false)">
+    <div
+      class="jf-dialog__wrapper"
+      v-show="visible"
+      @click.self="()=>$emit('update:visible', false)"
+    >
       <div class="jf-dialog" :style="{width, marginTop: top}">
         <div class="jf-dialog__header">
           <slot name="title">
             <span class="jf-dialog__title">{{title}}</span>
           </slot>
-          <button class="jf-dialog__headerclose" @click="$emit('update:visible',false)">
+          <button class="jf-dialog__headerclose" @click="()=>$emit('update:visible',false)">
             <i class="jf-icon-close"></i>
           </button>
         </div>
@@ -24,7 +28,7 @@
 
 <script>
 export default {
-  name: 'jfDialog',
+  name: 'jf-dialog',
   props: {
     title: {
       type: String,

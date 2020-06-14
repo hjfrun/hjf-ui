@@ -15,7 +15,7 @@
 <script>
 import '../assets/fonts/iconfont.css'
 export default {
-  name: 'jfButton',
+  name: 'jf-button',
   // 封装一个公用的组件,对props做一个约束,对props做一个校验
   props: {
     type: {
