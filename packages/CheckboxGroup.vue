@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'jf-checkbox-group',
+  name: 'hjf-checkbox-group',
   props: {
     value: {
       type: Array

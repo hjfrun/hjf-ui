@@ -1,15 +1,15 @@
 <template>
-  <div class="jf-switch" :class="{'is-checked': value}" @click="handleClick">
-    <span class="jf-switch__core" ref="core">
-      <span class="jf-switch__button"></span>
+  <div class="hjf-switch" :class="{'is-checked': value}" @click="handleClick">
+    <span class="hjf-switch__core" ref="core">
+      <span class="hjf-switch__button"></span>
     </span>
-    <input type="checkbox" class="jf-switch__input" :name="name" ref="input" />
+    <input type="checkbox" class="hjf-switch__input" :name="name" ref="input" />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'jf-switch',
+  name: 'hjf-switch',
   props: {
     value: {
       type: Boolean,
@@ -52,14 +52,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.jf-switch {
+.hjf-switch {
   display: inline-block;
   align-items: center;
   position: relative;
   font-size: 14px;
   line-height: 20px;
   vertical-align: middle;
-  .jf-switch__core {
+  .hjf-switch__core {
     margin: 0;
     display: inline-block;
     position: relative;
@@ -73,7 +73,7 @@ export default {
     cursor: pointer;
     transition: border-color 0.3s, background-color 0.3s;
     vertical-align: middle;
-    .jf-switch__button {
+    .hjf-switch__button {
       position: absolute;
       top: 1px;
       left: 1px;
@@ -87,16 +87,16 @@ export default {
 }
 // 选中样式
 .is-checked {
-  .jf-switch__core {
+  .hjf-switch__core {
     border-color: #409eff;
     background-color: #409eff;
-    .jf-switch__button {
+    .hjf-switch__button {
       transform: translateX(20px);
     }
   }
 }
 // 隐藏input标签
-.jf-switch__input {
+.hjf-switch__input {
   position: absolute;
   width: 0;
   height: 0;

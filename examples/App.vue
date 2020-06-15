@@ -1,13 +1,14 @@
 <template>
   <div id="app">
-    <jf-form :model="model" labelWidth="100px">
-      <jf-form-item label="用户名">
-        <jf-input v-model="model.username" placeholder="请输入用户名"></jf-input>
-      </jf-form-item>
-      <jf-form-item label="选择">
-        <jf-switch v-model="model.active"></jf-switch>
-      </jf-form-item>
-    </jf-form>
+    <hjf-button>我的新按钮</hjf-button>
+    <!-- <hjf-form :model="model" labelWidth="100px">
+      <hjf-form-item label="用户名">
+        <hjf-input v-model="model.username" placeholder="请输入用户名"></hjf-input>
+      </hjf-form-item>
+      <hjf-form-item label="选择">
+        <hjf-switch v-model="model.active"></hjf-switch>
+      </hjf-form-item>
+    </hjf-form>-->
   </div>
 </template>
 

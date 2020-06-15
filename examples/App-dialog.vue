@@ -1,22 +1,22 @@
 <template>
   <div id="app">
-    <jf-button @click="visible=!visible">显示</jf-button>
-    <jf-dialog :visible.sync="visible" title="温馨提示" width="60%" top="30vh">
+    <hjf-button @click="visible=!visible">显示</hjf-button>
+    <hjf-dialog :visible.sync="visible" title="温馨提示" width="60%" top="30vh">
       <ul>
         <li>1</li>
         <li>2</li>
         <li>3</li>
       </ul>
       <template v-slot:footer>
-        <jf-button type="primary" @click="visible=false">确定</jf-button>
-        <jf-button @click="visible=false">取消</jf-button>
+        <hjf-button type="primary" @click="visible=false">确定</hjf-button>
+        <hjf-button @click="visible=false">取消</hjf-button>
       </template>
-    </jf-dialog>
-    <!-- <jf-dialog>
+    </hjf-dialog>
+    <!-- <hjf-dialog>
       <template v-slot:title>
         <h2>我是标题</h2>
       </template>
-    </jf-dialog>-->
+    </hjf-dialog>-->
   </div>
 </template>
 
@@ -39,7 +39,7 @@ export default {
   flex-direction: row;
   justify-content: space-around;
   margin-bottom: 20px;
-  .jf-button {
+  .hjf-button {
     margin-bottom: 20px;
   }
 }

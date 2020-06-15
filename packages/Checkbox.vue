@@ -1,16 +1,16 @@
 <template>
-  <label class="jf-checkbox" :class="{'is-checked':isChecked}">
-    <span class="jf-checkbox__input">
-      <span class="jf-checkbox__inner"></span>
+  <label class="hjf-checkbox" :class="{'is-checked':isChecked}">
+    <span class="hjf-checkbox__input">
+      <span class="hjf-checkbox__inner"></span>
       <input
         type="checkbox"
-        class="jf-checkbox__original"
+        class="hjf-checkbox__original"
         :name="name"
         v-model="model"
         :value="label"
       />
     </span>
-    <span class="jf-checkbox__label">
+    <span class="hjf-checkbox__label">
       <slot></slot>
       <template v-if="!$slots.default">{{ label }}</template>
     </span>
@@ -19,7 +19,7 @@
 
 <script>
 export default {
-  name: 'jf-checkbox',
+  name: 'hjf-checkbox',
   inject: {
     CheckboxGroup: {
       default: ''
@@ -61,7 +61,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.jf-checkbox {
+.hjf-checkbox {
   color: #606266;
   font-weight: 500;
   font-size: 14px;
@@ -71,7 +71,7 @@ export default {
   white-space: nowrap;
   user-select: none;
   margin-right: 30px;
-  .jf-checkbox__input {
+  .hjf-checkbox__input {
     white-space: nowrap;
     cursor: pointer;
     outline: none;
@@ -79,7 +79,7 @@ export default {
     line-height: 1;
     position: relative;
     vertical-align: middle;
-    .jf-checkbox__inner {
+    .hjf-checkbox__inner {
       display: inline-block;
       position: relative;
       border: 1px solid #dcdfe6;
@@ -107,7 +107,7 @@ export default {
         transform-origin: center;
       }
     }
-    .jf-checkbox__original {
+    .hjf-checkbox__original {
       opacity: 0;
       outline: none;
       position: absolute;
@@ -118,7 +118,7 @@ export default {
       z-index: -1;
     }
   }
-  .jf-checkbox__label {
+  .hjf-checkbox__label {
     display: inline-block;
     padding-left: 10px;
     line-height: 19px;
@@ -126,9 +126,9 @@ export default {
   }
 }
 // 选中的样式
-.jf-checkbox.is-checked {
-  .jf-checkbox__input {
-    .jf-checkbox__inner {
+.hjf-checkbox.is-checked {
+  .hjf-checkbox__input {
+    .hjf-checkbox__inner {
       background-color: #409eff;
       border-color: #409eff;
       &:after {
@@ -136,7 +136,7 @@ export default {
       }
     }
   }
-  .jf-checkbox__label {
+  .hjf-checkbox__label {
     color: #409eff;
   }
 }

@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <jf-input v-model="username" placeholder="请输入用户名..." :name="username" clearable></jf-input>
+    <hjf-input v-model="username" placeholder="请输入用户名..." :name="username" clearable></hjf-input>
     <br />
-    <jf-input
+    <hjf-input
       v-model="password"
       type="password"
       placeholder="请输入密码..."
       :name="password"
       show-password
-    ></jf-input>
-    <!-- <jf-input v-model="username" clearable></jf-input> -->
-    <!-- <jf-input v-model="username" show-password></jf-input> -->
+    ></hjf-input>
+    <!-- <hjf-input v-model="username" clearable></hjf-input> -->
+    <!-- <hjf-input v-model="username" show-password></hjf-input> -->
   </div>
 </template>
 
@@ -30,7 +30,7 @@ export default {
 
 <style lang="scss" scoped>
 #app {
-  .jf-input {
+  .hjf-input {
     width: 220px;
   }
 }

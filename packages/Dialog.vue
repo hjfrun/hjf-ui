@@ -2,23 +2,23 @@
   <transition name="dialog-fade">
     <!-- 对话框的遮罩, .self代表只有点击自己才触发 -->
     <div
-      class="jf-dialog__wrapper"
+      class="hjf-dialog__wrapper"
       v-show="visible"
       @click.self="()=>$emit('update:visible', false)"
     >
-      <div class="jf-dialog" :style="{width, marginTop: top}">
-        <div class="jf-dialog__header">
+      <div class="hjf-dialog" :style="{width, marginTop: top}">
+        <div class="hjf-dialog__header">
           <slot name="title">
-            <span class="jf-dialog__title">{{title}}</span>
+            <span class="hjf-dialog__title">{{title}}</span>
           </slot>
-          <button class="jf-dialog__headerclose" @click="()=>$emit('update:visible',false)">
-            <i class="jf-icon-close"></i>
+          <button class="hjf-dialog__headerclose" @click="()=>$emit('update:visible',false)">
+            <i class="hjf-icon-close"></i>
           </button>
         </div>
-        <div class="jf-dialog__body">
+        <div class="hjf-dialog__body">
           <slot></slot>
         </div>
-        <div v-show="$slots.footer" class="jf-dialog__footer">
+        <div v-show="$slots.footer" class="hjf-dialog__footer">
           <slot name="footer"></slot>
         </div>
       </div>
@@ -28,7 +28,7 @@
 
 <script>
 export default {
-  name: 'jf-dialog',
+  name: 'hjf-dialog',
   props: {
     title: {
       type: String,
@@ -52,7 +52,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.jf-dialog__wrapper {
+.hjf-dialog__wrapper {
   position: fixed;
   top: 0;
   right: 0;
@@ -62,7 +62,7 @@ export default {
   margin: 0;
   z-index: 2001;
   background-color: rgba(0, 0, 0, 0.5);
-  .jf-dialog {
+  .hjf-dialog {
     position: relative;
     margin: 15vh auto 50px;
     background: #fff;
@@ -72,12 +72,12 @@ export default {
     width: 30%;
     &__header {
       padding: 20px 20px 10px;
-      .jf-dialog__title {
+      .hjf-dialog__title {
         line-height: 24px;
         font-size: 18px;
         color: #303133;
       }
-      .jf-dialog__headerclose {
+      .hjf-dialog__headerclose {
         position: absolute;
         top: 20px;
         right: 20px;
@@ -87,7 +87,7 @@ export default {
         outline: none;
         cursor: pointer;
         font-size: 16px;
-        .jf-icon-close {
+        .hjf-icon-close {
           color: 909399;
         }
       }
@@ -102,7 +102,7 @@ export default {
       padding: 10px 20px 20px;
       text-align: right;
       box-sizing: border-box;
-      ::v-deep .jf-button:first-child {
+      ::v-deep .hjf-button:first-child {
         margin-right: 20px;
       }
     }

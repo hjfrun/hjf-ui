@@ -1,18 +1,18 @@
 <template>
-  <div class="jf-input" :class="{'jf-input__suffix': showSuffix}">
+  <div class="hjf-input" :class="{'hjf-input__suffix': showSuffix}">
     <input
       :type="showPassword ? (passwordVisible ? 'text': 'password'):type"
-      class="jf-input__inner"
+      class="hjf-input__inner"
       :class="{'is-disabled': disabled}"
       :placeholder="placeholder"
       :value="value"
       @input="(e)=>$emit('input', e.target.value)"
     />
-    <span class="jf-input__suffix" v-if="showSuffix">
-      <i class="jf-icon-cancel" v-if="clearable && value" @click="()=>$emit('input','')"></i>
+    <span class="hjf-input__suffix" v-if="showSuffix">
+      <i class="hjf-icon-cancel" v-if="clearable && value" @click="()=>$emit('input','')"></i>
       <i
-        class="jf-icon-visible"
-        :class="{'jf-icon-visible-active':passwordVisible}"
+        class="hjf-icon-visible"
+        :class="{'hjf-icon-visible-active':passwordVisible}"
         v-if="showPassword"
         @click="passwordVisible=!passwordVisible"
       ></i>
@@ -22,7 +22,7 @@
 
 <script>
 export default {
-  name: 'jf-input',
+  name: 'hjf-input',
   props: {
     placeholder: {
       type: String,
@@ -67,12 +67,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.jf-input {
+.hjf-input {
   width: 100%;
   position: relative;
   font-size: 14px;
   display: inline-block;
-  .jf-input__inner {
+  .hjf-input__inner {
     -webkit-appearance: none;
     background-color: #fff;
     background-image: none;
@@ -103,11 +103,11 @@ export default {
   }
 }
 
-.jf-input__suffix {
-  .jf-input__inner {
+.hjf-input__suffix {
+  .hjf-input__inner {
     padding-right: 30px;
   }
-  .jf-input__suffix {
+  .hjf-input__suffix {
     position: absolute;
     right: 10px;
     height: 100%;
@@ -123,7 +123,7 @@ export default {
       cursor: pointer;
       transition: color 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
     }
-    .jf-icon-visible-active {
+    .hjf-icon-visible-active {
       color: blue;
     }
   }

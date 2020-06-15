@@ -1,12 +1,12 @@
 <template>
-  <div class="jf-form">
+  <div class="hjf-form">
     <slot></slot>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'jf-form',
+  name: 'hjf-form',
   provide() {
     return {
       Form: this

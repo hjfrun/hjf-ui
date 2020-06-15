@@ -1,12 +1,12 @@
 <template>
-  <div class="jf-radio-group">
+  <div class="hjf-radio-group">
     <slot></slot>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'jf-radio-group',
+  name: 'hjf-radio-group',
   props: {
     value: null
   },

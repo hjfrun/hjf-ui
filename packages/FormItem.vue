@@ -1,7 +1,7 @@
 <template>
-  <div class="jf-form-item">
-    <label :style="labelStyle" class="jf-form-item__label">{{ label }}</label>
-    <div class="jf-form-item__content">
+  <div class="hjf-form-item">
+    <label :style="labelStyle" class="hjf-form-item__label">{{ label }}</label>
+    <div class="hjf-form-item__content">
       <slot></slot>
     </div>
   </div>
@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: 'jf-form-item',
+  name: 'hjf-form-item',
   inject: {
     Form: {
       default: ''
@@ -32,9 +32,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.jf-form-item {
+.hjf-form-item {
   margin-bottom: 25px;
-  .jf-form-item__label {
+  .hjf-form-item__label {
     text-align: right;
     vertical-align: middle;
     float: left;
@@ -44,7 +44,7 @@ export default {
     padding: 0 12px 0 0;
     box-sizing: border-box;
   }
-  .jf-form-item__content {
+  .hjf-form-item__content {
     line-height: 40px;
     position: relative;
     font-size: 14px;

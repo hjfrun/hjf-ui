@@ -1,14 +1,14 @@
 <template>
   <div id="app">
-    <!-- <jf-radio label="1" v-model="gender">男</jf-radio>
-    <jf-radio label="0" v-model="gender">女</jf-radio>-->
-    <!-- <jf-radio label="1" v-model="gender"></jf-radio>
-    <jf-radio label="0" v-model="gender"></jf-radio>-->
+    <!-- <hjf-radio label="1" v-model="gender">男</hjf-radio>
+    <hjf-radio label="0" v-model="gender">女</hjf-radio>-->
+    <!-- <hjf-radio label="1" v-model="gender"></hjf-radio>
+    <hjf-radio label="0" v-model="gender"></hjf-radio>-->
 
-    <jf-radio-group v-model="gender">
-      <jf-radio label="1">男</jf-radio>
-      <jf-radio label="0">女</jf-radio>
-    </jf-radio-group>
+    <hjf-radio-group v-model="gender">
+      <hjf-radio label="1">男</hjf-radio>
+      <hjf-radio label="0">女</hjf-radio>
+    </hjf-radio-group>
   </div>
 </template>
 

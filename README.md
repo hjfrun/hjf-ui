@@ -1,8 +1,8 @@
 - 安装组件库
-    npm add jf-ui
+    npm install --save hjf-ui
 
 - 全局导入
-    import JfUI form 'jf-ui'
-    import 'jf-ui/lib/jf-ui.css'
+    import HjfUI from 'hjf-ui'
+    import 'hjf-ui/dist/hjf-ui.css'
 
-    Vue.use(JfUI)
+    Vue.use(HjfUI)

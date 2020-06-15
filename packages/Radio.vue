@@ -1,10 +1,10 @@
 <template>
-  <label class="jf-radio" :class="{'is-checked': label===model}">
-    <span class="jf-radio__input">
-      <span class="jf-radio__inner"></span>
-      <input type="radio" class="jf-radio__original" v-model="model" :value="label" :name="name" />
+  <label class="hjf-radio" :class="{'is-checked': label===model}">
+    <span class="hjf-radio__input">
+      <span class="hjf-radio__inner"></span>
+      <input type="radio" class="hjf-radio__original" v-model="model" :value="label" :name="name" />
     </span>
-    <span class="jf-radio__label">
+    <span class="hjf-radio__label">
       <slot></slot>
       <template v-if="!$slots.default">{{label}}</template>
     </span>
@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: 'jf-radio',
+  name: 'hjf-radio',
   props: {
     label: {
       type: [String, Number, Boolean],
@@ -50,7 +50,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.jf-radio {
+.hjf-radio {
   color: #606266;
   font-weight: 500;
   line-height: 1;
@@ -64,7 +64,7 @@ export default {
   -moz-user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
-  .jf-radio__input {
+  .hjf-radio__input {
     white-space: nowrap;
     cursor: pointer;
     outline: none;
@@ -72,7 +72,7 @@ export default {
     line-height: 1;
     position: relative;
     vertical-align: middle;
-    .jf-radio__inner {
+    .hjf-radio__inner {
       border: 1px solid #dcdfe6;
       border-radius: 100%;
       width: 14px;
@@ -95,7 +95,7 @@ export default {
         transition: transform 0.15s ease-in;
       }
     }
-    .jf-radio__original {
+    .hjf-radio__original {
       opacity: 0;
       outline: none;
       position: absolute;
@@ -107,15 +107,15 @@ export default {
       margin: 0;
     }
   }
-  .jf-radio__label {
+  .hjf-radio__label {
     font-size: 14px;
     padding-left: 10px;
   }
 }
 // 选中的样式
-.jf-radio.is-checked {
-  .jf-radio__input {
-    .jf-radio__inner {
+.hjf-radio.is-checked {
+  .hjf-radio__input {
+    .hjf-radio__inner {
       border-color: #409eff;
       background-color: #409eff;
       &:after {
@@ -123,7 +123,7 @@ export default {
       }
     }
   }
-  .jf-radio__label {
+  .hjf-radio__label {
     color: #409eff;
   }
 }

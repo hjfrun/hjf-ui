@@ -1,12 +1,12 @@
 <template>
   <div id="app">
-    <jf-checkbox v-model="active">是否选中</jf-checkbox>
+    <hjf-checkbox v-model="active">是否选中</hjf-checkbox>
 
-    <jf-checkbox-group v-model="hobby">
-      <jf-checkbox label="抽烟"></jf-checkbox>
-      <jf-checkbox label="喝酒"></jf-checkbox>
-      <jf-checkbox label="看电影"></jf-checkbox>
-    </jf-checkbox-group>
+    <hjf-checkbox-group v-model="hobby">
+      <hjf-checkbox label="抽烟"></hjf-checkbox>
+      <hjf-checkbox label="喝酒"></hjf-checkbox>
+      <hjf-checkbox label="看电影"></hjf-checkbox>
+    </hjf-checkbox-group>
   </div>
 </template>
 

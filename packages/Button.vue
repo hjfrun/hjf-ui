@@ -1,11 +1,11 @@
 <template>
   <button
-    class="jf-button"
-    :class="[`jf-button--${type}`, {'is-plain': plain, 'is-round': round, 'is-circle': circle, 'is-disabled': disabled}]"
+    class="hjf-button"
+    :class="[`hjf-button--${type}`, {'is-plain': plain, 'is-round': round, 'is-circle': circle, 'is-disabled': disabled}]"
     @click="(e) => $emit('click',e)"
     :disabled="disabled"
   >
-    <i v-show="icon" :class="`jf-icon-${icon}`"></i>
+    <i v-show="icon" :class="`hjf-icon-${icon}`"></i>
     <span v-show="$slots.default">
       <slot></slot>
     </span>
@@ -15,7 +15,7 @@
 <script>
 import './fonts/iconfont.css'
 export default {
-  name: 'jf-button',
+  name: 'hjf-button',
   // 封装一个公用的组件,对props做一个约束,对props做一个校验
   props: {
     type: {
@@ -51,7 +51,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.jf-button {
+.hjf-button {
   display: inline-block;
   line-height: 1;
   white-space: nowrap;
@@ -82,7 +82,7 @@ export default {
   }
 }
 
-.jf-button--primary {
+.hjf-button--primary {
   color: #fff;
   background-color: #409eff;
   border-color: #409eff;
@@ -94,7 +94,7 @@ export default {
   }
 }
 
-.jf-button--success {
+.hjf-button--success {
   color: #fff;
   background-color: #67c23a;
   border-color: #67c23a;
@@ -106,7 +106,7 @@ export default {
   }
 }
 
-.jf-button--info {
+.hjf-button--info {
   color: #fff;
   background-color: #909399;
   border-color: #909399;
@@ -118,7 +118,7 @@ export default {
   }
 }
 
-.jf-button--warning {
+.hjf-button--warning {
   color: #fff;
   background-color: #e6a23c;
   border-color: #e6a23c;
@@ -130,7 +130,7 @@ export default {
   }
 }
 
-.jf-button--danger {
+.hjf-button--danger {
   color: #fff;
   background-color: #f56c6c;
   border-color: #f56c6c;
@@ -143,7 +143,7 @@ export default {
 }
 
 // 朴素按钮样式
-.jf-button.is-plain {
+.hjf-button.is-plain {
   &:hover,
   &:focus {
     background: #fff;
@@ -151,7 +151,7 @@ export default {
     color: #409eff;
   }
 }
-.jf-button--primary.is-plain {
+.hjf-button--primary.is-plain {
   color: #409eff;
   background: #ecf5ff;
   &:hover,
@@ -161,7 +161,7 @@ export default {
     color: #fff;
   }
 }
-.jf-button--success.is-plain {
+.hjf-button--success.is-plain {
   color: #67c23a;
   background: #c2e7b0;
   &:hover,
@@ -171,7 +171,7 @@ export default {
     color: #fff;
   }
 }
-.jf-button--info.is-plain {
+.hjf-button--info.is-plain {
   color: #909399;
   background: #d3d4d6;
   &:hover,
@@ -181,7 +181,7 @@ export default {
     color: #fff;
   }
 }
-.jf-button--warning.is-plain {
+.hjf-button--warning.is-plain {
   color: #e6a23c;
   background: #f5dab1;
   &:hover,
@@ -191,7 +191,7 @@ export default {
     color: #fff;
   }
 }
-.jf-button--danger.is-plain {
+.hjf-button--danger.is-plain {
   color: #f56c6c;
   background: #fbc4c4;
   &:hover,
@@ -203,22 +203,22 @@ export default {
 }
 
 // round属性
-.jf-button.is-round {
+.hjf-button.is-round {
   border-radius: 20px;
   padding: 12px 23px;
 }
 // circle属性
-.jf-button.is-circle {
+.hjf-button.is-circle {
   border-radius: 50%;
   padding: 12px;
 }
 
 // disabled属性
-.jf-button.is-disabled {
+.hjf-button.is-disabled {
   cursor: no-drop;
 }
 
-.jf-button [class*='jf-icon-'] + span {
+.hjf-button [class*='hjf-icon-'] + span {
   margin-left: 5px;
 }
 </style>
